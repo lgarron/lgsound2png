@@ -1,22 +1,8 @@
 /*
- * lgwav2png.c
+ * lgpng_test.c
  * Lucas Garron
  * lucasg@gmx.de
  *
- * Started May 31, 2010
- * 
- * Intended to be a tool to generate pretty waveform images
- * from sound files.
- *
- * Based on the specification at
- * https://ccrma.stanford.edu/courses/422/projects/WaveFormat/
- */
-
-/*
- * TODO:
- * File error handling
- * Debug output optional
- * Assert checks optional
  */
 
 #include <assert.h>
