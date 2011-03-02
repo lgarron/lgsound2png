@@ -1,0 +1,32 @@
+#!/bin/bash
+#
+# Requires ffmpeg and convert (ImageMagick)
+#
+
+TEMP="/tmp/lgsound2png.tmp.$$.wav"
+WIDTH=1024
+HEIGHT=128
+
+if [ $# -lt 1 ]; then
+  echo "Usage: "
+  echo "lgsound2png file.mp3 [style index]"
+  echo "(Output written to file.mp3.wav)"
+  exit
+fi
+
+if [ $# -gt 1 ]; then
+  style=$2
+else
+  style=2
+fi
+
+echo "Processing $1"
+
+rm /tmp/lgsound2png* 2>/dev/null
+
+ffmpeg -i "$1" "$TEMP" 2>/dev/null
+./lgwav2png  -i "$TEMP" -o "$TEMP.png" -W $WIDTH -H $HEIGHT -s $style
+convert "$TEMP.png" "$1.png"
+
+rm /tmp/lgsound2png*
+
