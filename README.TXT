@@ -6,8 +6,8 @@ Started May 2010
 
 A tool to generate pretty waveform images from sound files.
 
-Contains small libraries for reading wave files (lgwav.c)
-and writing correctly formatted imafe files (lgpng.c).
+Contains small, independent libraries for reading wave files (lgwav.c)
+and writing correctly formatted image files (lgpng.c).
 
 To compile:
 make install
