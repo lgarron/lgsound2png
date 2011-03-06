@@ -5,7 +5,7 @@
 PROG = lgwav2png
 
 # Remember to use -O3 for performance.
-CFLAGS += -O0 -Wall -g -pedantic -ansi $(WARNINGS)
+CFLAGS += -O3 -Wall -pedantic -ansi $(WARNINGS)
 
 PROG_SRC = lgpng.c lgwav.c lgwav2png.c
 PROG_H = lgpng.h lgwav.h
